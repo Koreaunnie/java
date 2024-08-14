@@ -20,8 +20,8 @@ public class C01Variable {
         // 타입에 맞는 값만 넣을 수 있음
         // 정수를 저장할 수 있는 b라는 이름의 저장공간 생성
 
-        int b;
         // 초기화 되지 않은 변수는 사용할 수 없음
+        // int b;
         // System.out.println(b); -> 불가능
 
         // Q. 정수를 담을 수 있는 c 변수를 선언하고
