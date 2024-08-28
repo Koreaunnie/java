@@ -3,25 +3,47 @@ package ch06.exercise;
 public class Solution13 {
     public static void main(String[] args) {
         Member member1 = new Member();
-        Member member2 = new Member();
-        member1.name("hong");
+
+        member1.setName("hong");
+        System.out.println("member1.getName() = " + member1.getName());
     }
 }
 
 class Member {
-    public void name(String name) {
-        System.out.println(name);
+    private String name;
+    private String id;
+    private String password;
+    private int age;
+
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void id(String id) {
-        System.out.println(id);
+    public String getName() {
+        return name;
     }
 
-    public void password(String password) {
-        System.out.println(password);
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void age(int age) {
-        System.out.println(age);
+    public String getId() {
+        return id;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
