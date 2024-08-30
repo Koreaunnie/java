@@ -1,4 +1,4 @@
-package ch07.excercise.Solution8;
+package ch07.excercise.solution8;
 
 public class SnowTire extends Tire {
     public void run() {
