@@ -11,7 +11,6 @@ class Solution {
         int loop = 0;
         while (loop < rowIndex) {
             List<Integer> next = new ArrayList<>(rowIndex);
-
             next.add(1);
 
             // prev에 있는 것들 2개씩 더해서
