@@ -19,7 +19,7 @@ public class Solution {
 
         // 결과 List에
         List<Boolean> result = new ArrayList<>();
-        // 크면 true 추가, 아니면 false 추가
+        // 크거나 같으면 true 추가, 아니면 false 추가
         for (Integer candy : kids) {
             result.add((candy + extraCandies) >= max);
         }
