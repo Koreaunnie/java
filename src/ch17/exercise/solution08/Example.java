@@ -1,8 +1,6 @@
 package ch17.exercise.solution08;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Example {
@@ -13,11 +11,27 @@ public class Example {
                 new Member("신용권", "개발자")
         );
 
+        Map<String, List<Member>> map1 = new HashMap<>();
+        // 고전적 방법
+        for (Member m : list) {
+            String job = m.getJob();
+            if (map1.containsKey(job)) {
+                List<Member> members = map1.get(job);
+                members.add(m);
+            } else {
+                List<Member> members = new ArrayList<>();
+                map1.put(job, members);
+                members.add(m);
+            }
+        }
+        System.out.println(map1);
 
-        System.out.println("[개발자]");
+        System.out.println();
 
-
-        System.out.println("[디자이너]");
+        // stream
+        Map<String, List<Member>> map2 = list.stream()
+                .collect(Collectors.groupingBy(Member::getJob));
+        System.out.println(map2);
     }
 }
 
