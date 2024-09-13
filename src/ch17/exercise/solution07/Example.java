@@ -18,7 +18,6 @@ public class Example {
 
         developers.stream()
                 .forEach(m -> System.out.println(m.getName()));
-
     }
 }
 
